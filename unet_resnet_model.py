@@ -622,9 +622,9 @@ class SimpleTrainer:
                       batch_size: int = 16,
                       num_workers: int = 4,
                       files_per_batch: int = 5,
-                      max_swaths_per_file: int = 500,
+                      max_swaths_per_file: int = 1000,
                       save_dir: str = "./models",
-                      val_split: float = 0.2):  # Добавляем val_split
+                      val_split: float = 0.05):  # Добавляем val_split
         """Training with proper validation split"""
 
         os.makedirs(save_dir, exist_ok=True)
@@ -996,7 +996,7 @@ def main():
             files_per_batch=args.files_per_batch,
             max_swaths_per_file=args.max_swaths_per_file,
             save_dir=args.save_dir,
-            val_split=0.1  # Добавить это
+            val_split=0.05  # Добавить это
         )
 
         training_time = time.time() - start_time
