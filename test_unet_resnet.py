@@ -20,7 +20,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 
-def load_last_npz_samples(npz_dir: str, num_samples: int = 50):
+def load_last_npz_samples(npz_dir: str, num_samples: int = 200):
     """Load samples from the END of the LAST NPZ file"""
 
     # Find all NPZ files and get the last one
@@ -28,7 +28,7 @@ def load_last_npz_samples(npz_dir: str, num_samples: int = 50):
     if not npz_files:
         raise ValueError(f"No NPZ files found in {npz_dir}")
 
-    last_file = npz_files[1]
+    last_file = npz_files[-1]
     logger.info(f"Loading from last file: {os.path.basename(last_file)}")
 
     samples = []
@@ -117,7 +117,7 @@ def test_enhanced_model(npz_dir: str):
 
     # Load test samples
     logger.info("Loading test samples from end of last NPZ file...")
-    samples = load_last_npz_samples(npz_dir, num_samples=50)
+    samples = load_last_npz_samples(npz_dir, num_samples=200)
 
     if len(samples) == 0:
         logger.error("No valid samples found!")
