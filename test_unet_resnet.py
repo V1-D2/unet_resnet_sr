@@ -81,7 +81,7 @@ def load_last_npz_samples(npz_dir: str, num_samples: int = 50):
     return samples
 
 
-def test_enhanced_model():
+def test_enhanced_model(npz_dir: str):
     """Test the enhanced model"""
 
     # Paths
@@ -305,4 +305,12 @@ def test_enhanced_model():
 
 
 if __name__ == "__main__":
-    test_enhanced_model()
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Test Enhanced AMSR2 Model')
+    parser.add_argument('--npz-dir', type=str, required=True,
+                        help='Path to directory with NPZ files')
+    args = parser.parse_args()
+
+    # Pass npz_dir to the function
+    test_enhanced_model(args.npz_dir)

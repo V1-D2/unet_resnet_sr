@@ -120,4 +120,4 @@ nvidia-smi 2>/dev/null || echo "nvidia-smi not available"
 
 echo "============================================"
 echo "Test job completed: $(date)"
-echo "============================================"
+echo "=================================ß==========="
