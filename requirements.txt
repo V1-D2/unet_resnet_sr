@@ -1,0 +1,15 @@
+# Essential packages only - Python 3.12 compatible
+torch==2.1.0
+torchvision==0.16.0
+numpy>=1.21.0,<1.24.0
+matplotlib>=3.5.0
+scikit-learn>=1.0.0
+tqdm>=4.60.0
+Pillow>=9.0.0
+psutil>=5.8.0
+
+# Note: Avoid these packages if using Python 3.12:
+# - wandb (has setuptools issues)
+# - tensorboard (dependency conflicts)
+# - opencv-python (build issues)
+# - albumentations (dependency chain issues)
