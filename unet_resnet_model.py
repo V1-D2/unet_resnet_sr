@@ -703,8 +703,9 @@ class SimpleTrainer:
                 # Training loop
                 progress_bar = tqdm(
                     dataloader,
-                    desc=f"Epoch {epoch + 1} Batch {batch_idx + 1}/{total_batches}",
-                    leave=False
+                    desc=f"Epoch {epoch + 1}/{epochs} Batch {batch_idx + 1}/{total_batches}",
+                    leave=True,
+                    ncols=120
                 )
 
                 for data_idx, (low_res, high_res) in enumerate(progress_bar):
@@ -740,10 +741,12 @@ class SimpleTrainer:
                     for key, value in metrics.items():
                         epoch_metrics[key].append(value)
 
-                    if data_idx % 10 == 0:
+                    if data_idx % 5 == 0:  # Update more frequently
                         progress_bar.set_postfix({
-                            'Loss': f"{metrics['total_loss']:.3f}",
-                            'PSNR': f"{metrics['psnr']:.1f}"
+                            'Loss': f"{metrics['total_loss']:.4f}",
+                            'PSNR': f"{metrics['psnr']:.1f}dB",
+                            'SSIM': f"{metrics['ssim']:.3f}",
+                            'LR': f"{self.optimizer.param_groups[0]['lr']:.2e}"
                         })
 
                     if data_idx % 50 == 0:
