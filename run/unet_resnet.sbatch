@@ -69,7 +69,7 @@ apptainer exec --nv \
     --batch-size 16 \
     --num-workers 4 \
     --files-per-batch 5 \
-    --max-swaths-per-file 500 \
+    --max-swaths-per-file 1000 \
     --gradient-accumulation 2 \
     --lr 1e-4 \
     --save-dir ./models \
