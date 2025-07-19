@@ -66,7 +66,7 @@ apptainer exec --nv \
     --npz-dir /data \
     --max-files 100 \
     --epochs 100 \
-    --batch-size 16 \
+    --batch-size 8 \
     --num-workers 4 \
     --files-per-batch 5 \
     --max-swaths-per-file 1000 \
