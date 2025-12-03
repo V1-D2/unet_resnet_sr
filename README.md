@@ -502,7 +502,7 @@ If you use this code in your research, please cite:
 ```bibtex
 @misc{unet-resnet-amsr2-sr,
   title={Advanced Deep Learning Models for Generating Super-resolution AMSR2 Imagery in Support of Sea Ice Forecasting and Analysis},
-  author={Your Name},
+  author={Volodymyr Didur},
   year={2025},
   howpublished={\url{https://github.com/yourusername/unet-resnet-amsr2-sr}}
 }
