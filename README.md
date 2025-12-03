@@ -17,6 +17,15 @@ This repository implements a 2× super-resolution model specifically designed fo
 - **Comprehensive evaluation** with PSNR/SSIM metrics and detailed visualizations
 
 ---
+## Results
+### U-Net ResNet 8× Super-Resolution Comparison
+
+|               | Original (LR)                                 | Bicubic 8×                                    | U-Net ResNet 8×                             |
+|--------------|-----------------------------------------------|-----------------------------------------------|---------------------------------------------|
+| **Grayscale**| ![](images/sample_002_original_gray.png)      | ![](images/sample_002_bicubic_8x_gray.png)    | ![](images/sample_002_sr_8x_gray.png)       |
+| **Color**    | ![](images/sample_002_original.png)           | ![](images/sample_002_bicubic_8x.png)         | ![](images/sample_002_sr_8x.png)            |
+
+---
 
 ## Model Architecture
 
