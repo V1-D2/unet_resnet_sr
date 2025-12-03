@@ -523,10 +523,4 @@ AMSR2 data courtesy of JAXA (Japan Aerospace Exploration Agency).
 
 ## License
 
-This project is released under the MIT License. See `LICENSE` file for details.
-
----
-
-## Short Description (for GitHub)
-
-**U-Net ResNet 2× Super-Resolution for Thermal Satellite Data** — Deep learning model for enhancing AMSR2 brightness temperature imagery. PyTorch implementation with cascadable 2× upsampling, specialized loss function, and optimized training pipeline. Achieves 35-40 dB PSNR on validation data.
+This project is released under the MIT License.
