@@ -369,7 +369,7 @@ Processes a single image and saves:
 **SSIM (Structural Similarity Index):**
 - Assesses perceptual similarity (0-1 scale)
 - Considers luminance, contrast, and structure
-- Typical results: 0.95-0.98
+- Typical results: 0.95-0.97
 
 ---
 
