@@ -4,6 +4,7 @@ AMSR2 Sequential Trainer - OPTIMIZED All-in-One Version
 Fast 8x super-resolution training with in-memory caching
 
 This file combines all optimizations in a single script.
+Author: Volodymyr Didur / Dr. Tom Greenwald
 """
 
 import os
