@@ -25,7 +25,7 @@ This repository implements a 2× super-resolution model specifically designed fo
 The model follows a **U-Net encoder-decoder architecture** enhanced with ResNet blocks for improved gradient flow and feature learning.
 
 <div align="center">
-
+![photo_2025-12-03_01-53-05](https://github.com/user-attachments/assets/3bed0950-cb42-4f76-bcb1-a73834811900)
 ```
 Input (1×H×W)
     │
